@@ -1,6 +1,6 @@
 # Journal de bord
 
-##  Installation pfSense
+##  Etape 1 - Installation pfSense
 
 
 ### Ce qui a été fait
@@ -21,3 +21,23 @@
 - Importer Kali Linux sur VMnet2
 - Importer Ubuntu Server sur VMnet3
 - Accéder à l'interface web pfSense depuis Kali
+
+---
+---
+
+## Etape 2 — Connexion Kali & Accès WebConfigurator
+
+### Ce qui a été fait
+- Import VM Kali Linux dans VMware Fusion
+- Connexion Kali sur VMnet2 (LAN 192.168.10.0/24)
+- IP obtenue via DHCP pfSense : 192.168.10.100
+- Accès interface web pfSense : http://192.168.10.1
+- Setup Wizard complété : hostname, DNS, password admin
+
+### Difficultés rencontrées
+- Interfaces VMware mal assignées sur pfSense → corrigé
+- WebConfigurator inactif → résolu par redémarrage pfSense
+
+### Prochaine étape
+- Installer Ubuntu Server sur VMnet3 (DMZ)
+- Configurer règles firewall LAN → DMZ
