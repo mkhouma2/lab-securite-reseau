@@ -41,3 +41,27 @@
 ### Prochaine étape
 - Installer Ubuntu Server sur VMnet3 (DMZ)
 - Configurer règles firewall LAN → DMZ
+
+---
+---
+
+## Etape 3 — Architecture complète + Règles Firewall
+
+### Ce qui a été fait
+- Installation Ubuntu Server 24.04 sur VMnet3 (DMZ)
+- IP obtenue via DHCP pfSense : 192.168.20.100
+- OpenSSH installé sur Ubuntu
+- Règle firewall pfSense : LAN → DMZ autorisé (Protocol Any)
+- Test ping Kali → Ubuntu : OK
+- Connexion SSH Kali → Ubuntu : OK
+
+### Architecture finale
+- WAN  : 172.16.252.138/24 (NAT VMware)
+- LAN  : 192.168.10.0/24 — Kali (192.168.10.100)
+- DMZ  : 192.168.20.0/24 — Ubuntu (192.168.20.100)
+
+### Prochaine étape
+- Affiner les règles firewall (bloquer DMZ → LAN)
+- Installer Apache sur Ubuntu (serveur web en DMZ)
+- Tunnel VPN IPSec
+- IDS Suricata
