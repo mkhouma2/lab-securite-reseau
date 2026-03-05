@@ -29,7 +29,7 @@ IDS/IPS et tunnel VPN.
 - [x] Installation pfSense 2.7.2
 - [x] Configuration WAN / LAN / DMZ
 - [x] Connexion VMs Kali et Ubuntu
-- [ ] Règles firewall LAN → DMZ
+- [x] Règles firewall LAN → DMZ
 - [ ] Tunnel VPN IPSec
 - [ ] IDS Suricata
 - [ ] Tests d'intrusion depuis Kali
