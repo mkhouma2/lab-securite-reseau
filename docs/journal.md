@@ -65,3 +65,23 @@
 - Installer Apache sur Ubuntu (serveur web en DMZ)
 - Tunnel VPN IPSec
 - IDS Suricata
+
+---
+---
+
+## Etape 4 — Serveur web DMZ + NAT
+
+### Ce qui a été fait
+- Activation NAT Outbound pfSense pour DMZ (Hybrid mode)
+- Accès internet Ubuntu DMZ → installation Apache2
+- Page web Apache accessible depuis Kali : http://192.168.20.100
+- Architecture firewall finale :
+  - LAN → DMZ : Pass (Any)
+  - DMZ → LAN : Block
+  - DMZ → WAN : Pass + NAT
+
+### Architecture complète validée
+- Kali ping Ubuntu : OK
+- Kali SSH Ubuntu : OK  
+- Kali HTTP Ubuntu (Apache) : OK
+- Ubuntu ping Kali : BLOQUÉ ✅
